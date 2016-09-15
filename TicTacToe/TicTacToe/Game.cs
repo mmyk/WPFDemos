@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace TicTacToe
@@ -14,16 +10,16 @@ namespace TicTacToe
         const int MAX_TURNS = 9;
 
         private GameBoard _Board;
-        public GameBoard Board { get { return _Board; } set { if (_Board != value) { _Board = value; OnPropertyChanged("Board"); } } }
+        public GameBoard Board { get { return _Board; } set { if (_Board != value) { _Board = value; OnPropertyChanged(nameof(Board)); } } }
         
         private Player _CurrentPlayer;
-        public Player CurrentPlayer { get { return _CurrentPlayer; } set { if (_CurrentPlayer != value) { _CurrentPlayer = value; OnPropertyChanged("CurrentPlayer"); } } }
+        public Player CurrentPlayer { get { return _CurrentPlayer; } set { if (_CurrentPlayer != value) { _CurrentPlayer = value; OnPropertyChanged(nameof(CurrentPlayer)); } } }
 
         private int _Turn;
-        public int Turn { get { return _Turn; } set { if (_Turn != value) { _Turn = value; OnPropertyChanged("Turn"); } } }
+        public int Turn { get { return _Turn; } set { if (_Turn != value) { _Turn = value; OnPropertyChanged(nameof(Turn)); } } }
 
         private Boolean _HasWinner;
-        public Boolean HasWinner { get { return _HasWinner; } set { if (_HasWinner != value) { _HasWinner = value; OnPropertyChanged("HasWinner"); } } }
+        public Boolean HasWinner { get { return _HasWinner; } set { if (_HasWinner != value) { _HasWinner = value; OnPropertyChanged(nameof(HasWinner)); } } }
 
         public event PropertyChangedEventHandler PropertyChanged;
 		private void OnPropertyChanged(String propertyName)

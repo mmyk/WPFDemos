@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using System.Windows.Media;
 
 namespace TicTacToe
@@ -22,8 +15,8 @@ namespace TicTacToe
 
         public TicTacToeViewModel()
         {
-            Player1 = new Player("Player 1", "X");
-            Player2 = new Player("Player 2", "O");
+            Player1 = new Player("Player X", "X");
+            Player2 = new Player("Player O", "O");
             Player1.MarkColor = new SolidColorBrush(Colors.Red);
             Player2.MarkColor = new SolidColorBrush(Colors.Green);
 

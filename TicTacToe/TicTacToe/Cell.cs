@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ComponentModel;
-using System.Windows.Input;
 using System.Windows.Media;
 
 namespace TicTacToe
@@ -20,7 +15,7 @@ namespace TicTacToe
 		private string _Value;
 
         private Brush _Foreground;
-        public Brush Foreground { get { return _Foreground; } set { if (_Foreground != value) { _Foreground = value; OnPropertyChanged("Foreground"); } } }
+        public Brush Foreground { get { return _Foreground; } set { if (_Foreground != value) { _Foreground = value; OnPropertyChanged(nameof(Foreground)); } } }
 
         public event PropertyChangedEventHandler PropertyChanged;
 		private void OnPropertyChanged(String propertyName)
